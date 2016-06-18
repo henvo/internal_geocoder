@@ -12,4 +12,5 @@ Gem::Specification.new do |s|
   s.files         = Dir['lib/**/*', 'bin/*']
   s.require_paths = ['lib']
   s.homepage      = 'http://github.com/henvo/cl_geocoder'
+  s.add_development_dependency 'rspec'
 end

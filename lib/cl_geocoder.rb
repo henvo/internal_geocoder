@@ -1,5 +1,5 @@
-class CLGeocoder
-  def initialize
-    puts 'Alive!'
+module CLGeocoder
+  def self.coordinates(query)
+    {}
   end
 end
