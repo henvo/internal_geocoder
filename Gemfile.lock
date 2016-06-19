@@ -26,7 +26,7 @@ PLATFORMS
 
 DEPENDENCIES
   internal_geocoder!
-  rspec
+  rspec (~> 3.4, >= 3.4.0)
 
 BUNDLED WITH
    1.11.2
