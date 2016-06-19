@@ -1,16 +1,20 @@
 module CLGeocoder
   class Query
 
-    attr_accessor :text
-
     def initialize(text)
       @text = text
     end
 
-    private
+    def to_s
+      @text
+    end
 
     def zip_code_query?
-      @text =~ /\d{4,5}/
+      !(@text =~ /^\d{4,5}$/).nil?
+    end
+
+    def city_query?
+      !(@text =~ /^[A-za-z\-\(\)\s]{2,}$/).nil?
     end
   end
 end
