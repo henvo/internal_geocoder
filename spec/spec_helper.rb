@@ -1,7 +1,7 @@
 require 'bundler/setup'
 Bundler.setup
 
-require 'cl_geocoder'
+require 'internal_geocoder'
 
 RSpec.configure do |config|
   config.color = true

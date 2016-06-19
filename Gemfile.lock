@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cl_geocoder (0.0.0)
+    internal_geocoder (0.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -25,7 +25,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cl_geocoder!
+  internal_geocoder!
   rspec
 
 BUNDLED WITH

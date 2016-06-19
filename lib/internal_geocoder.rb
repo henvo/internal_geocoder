@@ -1,6 +1,6 @@
-require 'cl_geocoder/query'
+require 'internal_geocoder/query'
 
-module CLGeocoder
+module InternalGeocoder
   def self.coordinates(query)
     { lat: 0, lon: 0 }
   end
