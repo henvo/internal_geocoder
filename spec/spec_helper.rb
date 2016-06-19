@@ -6,5 +6,7 @@ require 'cl_geocoder'
 RSpec.configure do |config|
   config.color = true
   config.formatter = :documentation
-  config.syntax = :expect
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
 end
