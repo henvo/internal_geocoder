@@ -13,4 +13,6 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   s.homepage      = 'http://github.com/henvo/internal_geocoder'
   s.add_development_dependency 'rspec', '~> 3.4', '>= 3.4.0'
+  s.add_development_dependency "activerecord"
+  s.add_development_dependency "sqlite3"
 end

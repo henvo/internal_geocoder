@@ -3,8 +3,8 @@ class CreateInternalGeocoderLocations < ActiveRecord::Migration
     create_table :internal_geocoder_locations do |t|
       t.column :zip_code, :string, null: false
       t.column :city, :string, null: false
-      t.column :latitude, :decimal, null: false
-      t.column :longitude, :decimal, null: false
+      t.column :lat, :decimal, null: false
+      t.column :lon, :decimal, null: false
     end
   end
 

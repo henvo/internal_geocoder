@@ -1,6 +1,5 @@
 module InternalGeocoder
   class Query
-
     def initialize(text)
       @text = text
     end
