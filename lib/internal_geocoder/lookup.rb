@@ -5,11 +5,11 @@ module InternalGeocoder
     end
 
     def find_by_zip_code(query)
-      { lat: 0, lon: 0 }
+      InternalGeocoder::Location.where(zip_code: query.to_s)
     end
 
     def find_by_city(query)
-      { lat: 0, lon: 0 }
+      InternalGeocoder::Location.where(city: query.to_s)
     end
   end
 end
