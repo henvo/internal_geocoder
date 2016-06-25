@@ -15,4 +15,8 @@ module InternalGeocoder
   def self.table_name_prefix
     "#{ActiveRecord::Base.table_name_prefix}internal_geocoder_"
   end
+
+  if defined? Rails
+    require 'internal_geocoder/railtie'
+  end
 end
