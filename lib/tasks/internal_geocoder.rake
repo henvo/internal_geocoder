@@ -6,7 +6,7 @@ namespace :internal_geocoder do
   namespace :import do
     task :germany => :environment do
       open('https://raw.githubusercontent.com/henvo/geodata/master/germany.csv') do |data|
-        data.read.each_with_index do |row, index|
+        data.read.each_line do |row, index|
           next if index == 0
           row_data = row[0..-2].split(',')
           location = InternalGeocoder::Location.new(

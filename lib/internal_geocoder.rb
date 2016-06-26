@@ -18,5 +18,6 @@ module InternalGeocoder
 
   if defined? Rails
     require 'internal_geocoder/railtie'
+    require 'internal_geocoder/geocodable'
   end
 end
