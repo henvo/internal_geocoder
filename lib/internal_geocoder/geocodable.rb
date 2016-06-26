@@ -3,9 +3,9 @@ module InternalGeocoder
     extend ActiveSupport::Concern
 
     included do
-      scope :near, -> (lat, lon, radius) { find_by_sql(
-        "SELECT
-          id, (
+      scope :near, -> (lat, lon, radius) {
+        select(
+          "id, (
             3959 * acos (
             cos ( radians(78.3232) )
             * cos( radians( #{lat} ) )
@@ -13,9 +13,8 @@ module InternalGeocoder
             + sin ( radians(78.3232) )
             * sin( radians( #{lat} ) )
             )
-          ) AS distance
-        HAVING distance < #{radius}
-        ORDER BY distance;"
+          ) AS distance"
+        ).having("distance < #{radius}")
       )}
     end
   end
