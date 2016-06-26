@@ -9,18 +9,18 @@ Installation
 ------------
 
 Add this line to your Gemfile
-  gem 'internal_geocoder', git: 'git://github.com/henvo/internal_geocoder.git'
+    gem 'internal_geocoder', git: 'git://github.com/henvo/internal_geocoder.git'
 
 Run bundle
-  bundle install
+    bundle install
 
 Run rails generator to create needed migration
-  rails g internal_geocoder:location
+    rails g internal_geocoder:location
 
 Migrate
-  rake db:migrate
+    rake db:migrate
 
 Import your data (currently only germany is available)
-  rake internal_geocoder:import:germany
+    rake internal_geocoder:import:germany
 
 
