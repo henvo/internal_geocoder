@@ -16,10 +16,11 @@ module InternalGeocoder
     private
 
     def find_by(hash)
-      coords = InternalGeocoder::Location.where(hash).first
+      coords = InternalGeocoder::Location.where(hash)
                                          .pluck(:lat, :lon)
 
-      { lat: coords[0], lon: coords[1] }
+      return nil if coords.empty?
+      return { lat: coords.first[0], lon: coords.first[1] }
     end
   end
 end
