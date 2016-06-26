@@ -15,7 +15,7 @@ module InternalGeocoder
             )
           ) AS distance"
         ).having("distance < #{radius}")
-      )}
+      }
     end
   end
 end
