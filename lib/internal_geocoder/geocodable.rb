@@ -17,7 +17,7 @@ module InternalGeocoder
         ).having("distance < #{radius}")
       }
 
-      after_save :update_coordinates if zip_code_changed?
+      before_save :update_coordinates, if :zip_code_changed?
 
       private
 
