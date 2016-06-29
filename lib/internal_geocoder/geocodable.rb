@@ -23,7 +23,9 @@ module InternalGeocoder
 
       def update_coordinates
         return nil if zip_code.nil?
-        self.lat, self.lon = InternalGeocoder.coordinates(zip_code)
+        coords = InternalGeocoder.coordinates(zip_code)
+        self.lat = coords[:lat]
+        self.lon = coords[:lon]
       end
     end
   end
