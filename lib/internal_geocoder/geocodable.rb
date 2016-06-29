@@ -16,6 +16,15 @@ module InternalGeocoder
           ) AS distance"
         ).having("distance < #{radius}")
       }
+
+      after_save :update_coordinates if zip_code_changed?
+
+      private
+
+      def update_coordinates
+        return nil if zip_code.nil?
+        lat, lon = InternalGeocoder.coordinates(zip_code)
+      end
     end
   end
 end
