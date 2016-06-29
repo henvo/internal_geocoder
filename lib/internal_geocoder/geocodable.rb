@@ -23,7 +23,7 @@ module InternalGeocoder
 
       def update_coordinates
         return nil if zip_code.nil?
-        lat, lon = InternalGeocoder.coordinates(zip_code)
+        self.lat, self.lon = InternalGeocoder.coordinates(zip_code)
       end
     end
   end
