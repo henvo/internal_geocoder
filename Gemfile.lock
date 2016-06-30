@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    internal_geocoder (0.0.0)
+    zipcoder (0.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -48,9 +48,9 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
-  internal_geocoder!
   rspec (~> 3.4, >= 3.4.0)
   sqlite3
+  zipcoder!
 
 BUNDLED WITH
    1.11.2

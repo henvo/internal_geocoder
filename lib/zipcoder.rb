@@ -1,8 +1,8 @@
-require 'internal_geocoder/query'
-require 'internal_geocoder/lookup'
-require 'internal_geocoder/location'
+require 'zipcoder/query'
+require 'zipcoder/lookup'
+require 'zipcoder/location'
 
-module InternalGeocoder
+module Zipcoder
   def self.coordinates(text)
     query = Query.new(text)
     lookup = Lookup.new
@@ -13,11 +13,11 @@ module InternalGeocoder
   end
 
   def self.table_name_prefix
-    "#{ActiveRecord::Base.table_name_prefix}internal_geocoder_"
+    "#{ActiveRecord::Base.table_name_prefix}zipcoder_"
   end
 
   if defined? Rails
-    require 'internal_geocoder/railtie'
-    require 'internal_geocoder/geocodable'
+    require 'zipcoder/railtie'
+    require 'zipcoder/geocodable'
   end
 end

@@ -1,4 +1,4 @@
-module InternalGeocoder
+module Zipcoder
   class Query
     def initialize(text)
       @text = text

@@ -1,4 +1,4 @@
-module InternalGeocoder
+module Zipcoder
   module Geocodable
     extend ActiveSupport::Concern
 
@@ -23,7 +23,7 @@ module InternalGeocoder
 
       def update_coordinates
         return nil if zip_code.nil?
-        coords = InternalGeocoder.coordinates(zip_code)
+        coords = Zipcoder.coordinates(zip_code)
         self.lat = coords[:lat]
         self.lon = coords[:lon]
       end

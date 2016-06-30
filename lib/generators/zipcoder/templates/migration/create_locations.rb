@@ -1,15 +1,15 @@
-class CreateInternalGeocoderLocations < ActiveRecord::Migration
+class CreateZipcoderLocations < ActiveRecord::Migration
   def self.up
-    create_table :internal_geocoder_locations do |t|
+    create_table :zipcoder_locations do |t|
       t.column :zip_code, :string, null: false
       t.column :city, :string, null: false
       t.column :lat, :decimal, null: false, precision: 15, scale: 13
       t.column :lon, :decimal, null: false, precision: 15, scale: 13
     end
-    add_index :internal_geocoder_locations, :zip_code
+    add_index :zipcoder_locations, :zip_code
   end
 
   def self.down
-    drop_table :internal_geocoder_location
+    drop_table :zipcoder_locations
   end
 end

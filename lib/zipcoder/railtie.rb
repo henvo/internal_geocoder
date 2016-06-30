@@ -1,7 +1,7 @@
-module InternalGeocoder
+module Zipcoder
   class Railtie < Rails::Railtie
     rake_tasks do
-      load 'tasks/internal_geocoder.rake'
+      load 'tasks/zipcoder.rake'
     end
   end
 end

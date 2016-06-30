@@ -1,7 +1,7 @@
-internal_geocoder
+zipcoder
 =================
 
-Internal Geocoder is a geocoding solution for ruby. Instead of using an
+Zipcoder is a geocoding solution for ruby. Instead of using an
 external service (e.g. nominatim, google maps) it loads all required data from
 a file (csv).
 
@@ -10,7 +10,7 @@ Installation
 
 Add this line to your Gemfile
 
-    gem 'internal_geocoder', git: 'git://github.com/henvo/internal_geocoder.git'
+    gem 'zipcoder', git: 'git://github.com/henvo/zipcoder.git'
 
 Run bundle
 
@@ -18,7 +18,7 @@ Run bundle
 
 Run rails generator to create needed migration
 
-    rails g internal_geocoder:location
+    rails g zipcoder:location
 
 Migrate
 
@@ -26,6 +26,6 @@ Migrate
 
 Import your data (currently only germany is available)
 
-    rake internal_geocoder:import:germany
+    rake zipcoder:import:germany
 
 

@@ -1,4 +1,4 @@
-module InternalGeocoder
+module Zipcoder
   class Lookup
     def find_by_address(query)
       address = query.to_s.split(' ')
@@ -16,8 +16,8 @@ module InternalGeocoder
     private
 
     def find_by(hash)
-      coords = InternalGeocoder::Location.where(hash)
-                                         .pluck(:lat, :lon)
+      coords = Zipcoder::Location.where(hash)
+                                 .pluck(:lat, :lon)
 
       return nil if coords.empty?
       return { lat: coords.first[0], lon: coords.first[1] }
