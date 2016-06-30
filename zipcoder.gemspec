@@ -15,4 +15,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec', '~> 3.4', '>= 3.4.0'
   s.add_development_dependency "activerecord"
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "simplecov"
 end

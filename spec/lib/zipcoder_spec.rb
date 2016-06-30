@@ -34,6 +34,24 @@ describe Zipcoder do
         Zipcoder.coordinates(query)
       end
     end
+
+    context 'when zip_code is given' do
+      it 'should call zip_code lookup' do
+        expect_any_instance_of(Zipcoder::Lookup).to receive(
+          :find_by_zip_code
+        )
+        Zipcoder.coordinates('12345')
+      end
+    end
+
+    context 'when city is given' do
+      it 'should call city lookup' do
+        expect_any_instance_of(Zipcoder::Lookup).to receive(
+          :find_by_city
+        )
+        Zipcoder.coordinates('Paris')
+      end
+    end
   end
 end
 
