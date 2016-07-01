@@ -5,7 +5,7 @@ module Zipcoder
     included do
       scope :near, -> (lat, lon, radius) {
         select(
-          "id, (
+          "*, (
             6365 * acos (
             cos ( radians( #{lat} ) )
             * cos( radians( lat ) )
