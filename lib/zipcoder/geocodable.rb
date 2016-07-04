@@ -14,7 +14,7 @@ module Zipcoder
             * sin( radians( lat ) )
             )
           ) AS distance"
-        ).having("distance < #{radius}")
+        ).having("distance < #{radius}").order(:distance)
       }
 
       before_save :update_coordinates, if: :zip_code_changed?
