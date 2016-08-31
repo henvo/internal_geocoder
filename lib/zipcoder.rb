@@ -12,6 +12,13 @@ module Zipcoder
     nil
   end
 
+  def self.find_city_by_zip_code(zip_code)
+    query = Query.new(zip_code)
+    lookup = Lookup.new('city')
+    return lookup.find_by_zip_code(query) if query.zip_code_query?
+    nil
+  end
+
   def self.table_name_prefix
     "#{ActiveRecord::Base.table_name_prefix}zipcoder_"
   end
